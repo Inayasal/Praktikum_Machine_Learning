@@ -87,6 +87,28 @@ Dataset yang digunakan dalam proyek ini berasal dari Kaggle:
 ---
 
 
+### 📚 Referensi Bacaan — Teori Evaluasi Model
+
+Berikut adalah referensi artikel ilmiah dan sumber teoritis yang mendasari penggunaan metrik evaluasi **MAE**, **MSE**, dan **R²** dalam proyek ini:
+
+1. **Willmott, C. J., & Matsuura, K. (2005)**. *Advantages of the mean absolute error (MAE) over the root mean square error (RMSE) in assessing average model performance.* **Climate Research**, 30(1), 79–82.
+   - 🔗 [https://doi.org/10.3354/cr030079](https://doi.org/10.3354/cr030079)
+   - **Relevansi:** Artikel ini membahas kelebihan MAE dibandingkan RMSE sebagai metrik evaluasi rata-rata kesalahan prediksi model, dan mengapa MAE yang semakin kecil (mendekati 0) mencerminkan model yang lebih akurat.
+
+2. **Chai, T., & Draxler, R. R. (2014)**. *Root mean square error (RMSE) or mean absolute error (MAE)? – Arguments against avoiding RMSE in the literature.* **Geoscientific Model Development**, 7(3), 1247–1250.
+   - 🔗 [https://doi.org/10.5194/gmd-7-1247-2014](https://doi.org/10.5194/gmd-7-1247-2014)
+   - **Relevansi:** Mengkaji perbedaan antara MAE dan MSE/RMSE, termasuk penjelasan mengapa MSE memberikan penalti lebih besar pada kesalahan ekstrem (outlier) akibat operasi kuadrat, serta kapan masing-masing metrik paling tepat digunakan.
+
+3. **Cameron, A. C., & Windmeijer, F. A. G. (1997)**. *An R-squared measure of goodness of fit for some common nonlinear regression models.* **Journal of Econometrics**, 77(2), 329–342.
+   - 🔗 [https://doi.org/10.1016/S0304-4076(96)01818-0](https://doi.org/10.1016/S0304-4076(96)01818-0)
+   - **Relevansi:** Artikel ini membahas koefisien determinasi ($R^2$) sebagai ukuran *goodness of fit* model regresi — termasuk interpretasi nilai $R^2$ yang semakin mendekati 1 sebagai indikator kemampuan model dalam menjelaskan variasi data target.
+
+4. **Friedman, J. H. (2001)**. *Greedy function approximation: A gradient boosting machine.* **The Annals of Statistics**, 29(5), 1189–1232.
+   - 🔗 [https://doi.org/10.1214/aos/1013203451](https://doi.org/10.1214/aos/1013203451)
+   - **Relevansi:** Paper seminal yang memperkenalkan algoritma **Gradient Boosting**, landasan teoritis dari model **Gradient Boosting Regressor (GBR)** yang dipilih sebagai model terbaik dalam proyek ini berdasarkan nilai MAE, MSE, dan R² yang optimal.
+
+---
+
 ## 📊 Hasil Evaluasi Model pada Notebook
 
 Pada notebook praktikum [`Praktikum_dataset_HR_Analytic.ipynb`](./Praktikum_dataset_HR_Analytic.ipynb), dilakukan pengujian terhadap 3 algoritma regresi:
